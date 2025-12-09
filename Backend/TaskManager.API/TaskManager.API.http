@@ -1,0 +1,64 @@
+@TaskManager.API_HostAddress = http://localhost:5000
+
+### Get all tasks
+GET {{TaskManager.API_HostAddress}}/api/tasks
+Accept: application/json
+
+###
+
+### Get task by ID
+GET {{TaskManager.API_HostAddress}}/api/tasks/{id}
+Accept: application/json
+
+###
+
+### Create new task
+POST {{TaskManager.API_HostAddress}}/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Test Task",
+  "description": "This is a test task"
+}
+
+###
+
+### Update task
+PUT {{TaskManager.API_HostAddress}}/api/tasks/{id}
+Content-Type: application/json
+
+{
+  "title": "Updated Task",
+  "description": "Updated description",
+  "isCompleted": true
+}
+
+###
+
+### Toggle task completion
+PATCH {{TaskManager.API_HostAddress}}/api/tasks/{id}/toggle
+
+###
+
+### Reorder tasks
+PUT {{TaskManager.API_HostAddress}}/api/tasks/reorder
+Content-Type: application/json
+
+[
+  {
+    "id": "guid-here",
+    "order": 1
+  },
+  {
+    "id": "guid-here",
+    "order": 2
+  }
+]
+
+###
+
+### Delete task
+DELETE {{TaskManager.API_HostAddress}}/api/tasks/{id}
+
+###
+

@@ -1,0 +1,22 @@
+# Backend
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+.vs/
+.idea/
+
+# Frontend
+node_modules/
+dist/
+*.local
+
+# IDE
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
